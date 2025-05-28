@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu về cửa hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .navbar-brand img {
+        height: 30px;
+    }
+    
+    .hero {
+        background: url('anh1.avif') center/cover no-repeat;
+        height: 80vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+        animation: slideInLeft 1.5s ease;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        animation: slideInRight 1.5s ease;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .btn-custom {
+        margin-top: 20px;
+    }
+    
+    .section-products {
+        padding: 60px 0;
+    }
+    
+    .product-card img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+    }
+    
+    .product-card:hover img {
+        transform: scale(1.05);
+    }
+    
+    .product-card {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    
+    .banner-adidas {
+        height: 50vh;
+        min-height: 200px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: black;
+    }
+    
+    .banner-adidas img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.9;
+        filter: brightness(70%) contrast(105%);
+        transition: transform 0.5s ease;
+    }
+    
+    .banner-adidas:hover img {
+        transform: scale(1.02);
+    }
+    
+    .banner-adidas .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+        z-index: 1;
+    }
+    
+    .banner-adidas .container {
+        z-index: 2;
+    }
+    
+    .banner-adidas h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+    
+    .banner-adidas p {
+        font-size: 1.3rem;
+        margin-top: 15px;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+    }
+    
+    .banner-adidas .btn {
+        font-size: 1.1rem;
+        padding: 12px 28px;
+        margin-top: 25px;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        transition: 0.3s;
+    }
+    
+    .banner-adidas .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 18px rgba(255, 255, 255, 0.5);
+    }
+    
+    @media (max-width: 768px) {
+        .banner-adidas h1 {
+            font-size: 2.2rem;
+        }
+        .banner-adidas p {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index1.html">Trang chủ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index3.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Sản phẩm
+    </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index8.html">Quần áo</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="index4.html">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index5.html">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner-adidas position-relative text-white text-center">
+        <div class="bg-overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
+        <img src="baner.webp" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="Adidas Banner" style="z-index: 0; object-fit: cover; height: 100%;">
+        <div class="container position-relative py-5" style="z-index: 2;">
+            <h1 class="display-4 fw-bold">Khám Phá Bộ Sưu Tập Adidas Mới</h1>
+            <p class="lead">Phong cách thể thao hiện đại, đẳng cấp vượt trội</p>
+            <a href="#sanpham" class="btn btn-light btn-lg mt-3">Khám phá ngay</a>
+        </div>
+    </section>
+
+    <!-- Sứ mệnh và giá trị -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Sứ Mệnh Của Chúng Tôi</h2>
+                <p>Chúng tôi không chỉ bán giày, chúng tôi mang đến phong cách sống. Mỗi sản phẩm là sự chọn lọc kỹ lưỡng nhằm đáp ứng nhu cầu thời trang, thể thao và cá tính của khách hàng hiện đại.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Giá Trị Cốt Lõi</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">✔ Chính hãng 100%</li>
+                    <li class="list-group-item">✔ Dịch vụ tận tâm</li>
+                    <li class="list-group-item">✔ Luôn cập nhật xu hướng</li>
+                    <li class="list-group-item">✔ Khách hàng là trung tâm</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lịch sử phát triển -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Hành Trình Phát Triển</h2>
+            <p class="mt-3">Được thành lập vào năm 20XX, từ một cửa hàng nhỏ, chúng tôi đã phát triển trở thành chuỗi phân phối giày thể thao uy tín, phục vụ hàng chục nghìn khách hàng khắp cả nước.</p>
+        </div>
+    </section>
+
+    <!-- Đội ngũ và văn hóa -->
+    <section class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="IMG/anh2.avif" alt="" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h2>Đội Ngũ & Văn Hóa</h2>
+                <p>Chúng tôi là những người trẻ đam mê thời trang, năng động và sáng tạo. Văn hóa của chúng tôi đề cao sự đổi mới, tôn trọng và tinh thần phục vụ khách hàng bằng cả trái tim.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cảm nhận khách hàng -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Khách Hàng Nói Gì?</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Chất lượng tuyệt vời, giao hàng nhanh, giá hợp lý."</p>
+                        <footer class="blockquote-footer">Minh Tâm, Hà Nội</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Rất hài lòng với đội ngũ hỗ trợ khách hàng!"</p>
+                        <footer class="blockquote-footer">Anh Quân, Đà Nẵng</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Mẫu mã đa dạng, luôn có hàng mới mỗi tuần."</p>
+                        <footer class="blockquote-footer">Thảo Nhi, TP. HCM</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thông tin liên hệ -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Liên Hệ Với Chúng Tôi</h2>
+                <p>📍 Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</p>
+                <p>📞 Điện thoại: 0909 123 456</p>
+                <p>📧 Email: support@cuahanggiay.vn</p>
+            </div>
+            <div class="col-md-6">
+                <iframe class="w-100 rounded shadow" height="250" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.141949181216!2d106.6974010152601!3d10.80037256168213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e6f3d1a2c7%3A0xc3b3b6a6f3e78f7d!2zMTIzIMSQ4buTbmcgQUJDLCBRdeG6rW4gMSwgVGjDoG5oIHBo4buRLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1627727173433!5m2!1svi!2s">
+        </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Cửa Hàng Giày Chính Hãng. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
